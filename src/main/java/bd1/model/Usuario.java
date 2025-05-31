@@ -6,6 +6,18 @@ public class Usuario {
     private String email;
     private String tipo; // "solicitante" ou "gestor"
 
+    // Construtor vazio
+    public Usuario() {}
+
+    // Construtor com todos os atributos
+    public Usuario(int id, String nome, String email, String tipo) {
+        this.id = id;
+        this.nome = nome;
+        this.email = email;
+        this.tipo = tipo;
+    }
+
+    // Get e Set
     public int getId() { return id; }
     public void setId(int id) { this.id = id; }
 
