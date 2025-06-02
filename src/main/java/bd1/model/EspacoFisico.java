@@ -6,6 +6,19 @@ public class EspacoFisico {
     private double metragem;
     private String equipamentos;
 
+    public EspacoFisico(long id, String nome, double metragem, String equipamentos) {
+        this.id = id;
+        this.nome = nome;
+        this.metragem = metragem;
+        this.equipamentos = equipamentos;
+    }
+
+    public EspacoFisico(String nome, double metragem, String equipamentos) {
+        this(0L, nome, metragem, equipamentos);
+    }
+
+    public EspacoFisico() {}
+
     public long getId() { return id; }
     public void setId(long id) { this.id = id; }
 
@@ -17,4 +30,14 @@ public class EspacoFisico {
 
     public String getEquipamentos() { return equipamentos; }
     public void setEquipamentos(String equipamentos) { this.equipamentos = equipamentos; }
+
+    @Override
+    public String toString() {
+        return "EspacoFisico{" +
+                "id=" + id +
+                ", nome='" + nome + '\'' +
+                ", metragem=" + metragem +
+                ", equipamentos='" + equipamentos + '\'' +
+                '}';
+    }
 }
