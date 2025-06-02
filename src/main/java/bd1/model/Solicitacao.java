@@ -12,6 +12,17 @@ public class Solicitacao {
     private String status;
     private String justificativa;
 
+    public Solicitacao() {}
+
+    public Solicitacao(long idUsuario, long idEspaco, LocalDate dataReserva, LocalTime horaReserva, String status, String justificativa) {
+        this.idUsuario = idUsuario;
+        this.idEspaco = idEspaco;
+        this.dataReserva = dataReserva;
+        this.horaReserva = horaReserva;
+        this.status = status;
+        this.justificativa = justificativa;
+    }
+
     public long getId() { return id; }
     public void setId(long id) { this.id = id; }
 
@@ -32,4 +43,11 @@ public class Solicitacao {
 
     public String getJustificativa() { return justificativa; }
     public void setJustificativa(String justificativa) { this.justificativa = justificativa; }
+
+    @Override
+    public String toString() {
+        return "Solicitacao [id=" + id + ", usuario=" + idUsuario + ", espaco=" + idEspaco +
+                ", data=" + dataReserva + ", hora=" + horaReserva +
+                ", status=" + status + ", justificativa=" + justificativa + "]";
+    }
 }
