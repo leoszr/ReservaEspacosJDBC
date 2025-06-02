@@ -3,29 +3,20 @@ package bd1.model;
 import java.time.LocalDateTime;
 
 public class Auditoria {
-    private int id;
-    private int idUsuario;
+    private long id;
+    private long idUsuario;
     private String acao;
-    private LocalDateTime dataHora;
+    private LocalDateTime dataAcao;
 
-    public Auditoria() {}
+    public long getId() { return id; }
+    public void setId(long id) { this.id = id; }
 
-    public Auditoria(int id, int idUsuario, String acao, LocalDateTime dataHora) {
-        this.id = id;
-        this.idUsuario = idUsuario;
-        this.acao = acao;
-        this.dataHora = dataHora;
-    }
-
-    public int getId() { return id; }
-    public void setId(int id) { this.id = id; }
-
-    public int getIdUsuario() { return idUsuario; }
-    public void setIdUsuario(int idUsuario) { this.idUsuario = idUsuario; }
+    public long getIdUsuario() { return idUsuario; }
+    public void setIdUsuario(long idUsuario) { this.idUsuario = idUsuario; }
 
     public String getAcao() { return acao; }
     public void setAcao(String acao) { this.acao = acao; }
 
-    public LocalDateTime getDataHora() { return dataHora; }
-    public void setDataHora(LocalDateTime dataHora) { this.dataHora = dataHora; }
+    public LocalDateTime getDataAcao() { return dataAcao; }
+    public void setDataAcao(LocalDateTime dataAcao) { this.dataAcao = dataAcao; }
 }

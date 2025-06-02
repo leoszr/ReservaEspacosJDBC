@@ -3,42 +3,28 @@ package bd1.model;
 import java.time.LocalDateTime;
 
 public class Avaliacao {
-    private int id;
-    private int idSolicitacao;
-    private int idGestor;
-    private String status;
+    private long id;
+    private long idSolicitacao;
+    private long idGestor;
+    private LocalDateTime dataAvaliacao;
+    private String statusAprovacao;
     private String justificativa;
-    private LocalDateTime dataHoraAvaliacao;
 
-    public Avaliacao() {}
+    public long getId() { return id; }
+    public void setId(long id) { this.id = id; }
 
-    public Avaliacao(int id, int idSolicitacao, int idGestor, String status, String justificativa,
-                     LocalDateTime dataHoraAvaliacao) {
-        this.id = id;
-        this.idSolicitacao = idSolicitacao;
-        this.idGestor = idGestor;
-        this.status = status;
-        this.justificativa = justificativa;
-        this.dataHoraAvaliacao = dataHoraAvaliacao;
-    }
+    public long getIdSolicitacao() { return idSolicitacao; }
+    public void setIdSolicitacao(long idSolicitacao) { this.idSolicitacao = idSolicitacao; }
 
-    public int getId() { return id; }
-    public void setId(int id) { this.id = id; }
+    public long getIdGestor() { return idGestor; }
+    public void setIdGestor(long idGestor) { this.idGestor = idGestor; }
 
-    public int getIdSolicitacao() { return idSolicitacao; }
-    public void setIdSolicitacao(int idSolicitacao) { this.idSolicitacao = idSolicitacao; }
+    public LocalDateTime getDataAvaliacao() { return dataAvaliacao; }
+    public void setDataAvaliacao(LocalDateTime dataAvaliacao) { this.dataAvaliacao = dataAvaliacao; }
 
-    public int getIdGestor() { return idGestor; }
-    public void setIdGestor(int idGestor) { this.idGestor = idGestor; }
-
-    public String getStatus() { return status; }
-    public void setStatus(String status) { this.status = status; }
+    public String getStatusAprovacao() { return statusAprovacao; }
+    public void setStatusAprovacao(String statusAprovacao) { this.statusAprovacao = statusAprovacao; }
 
     public String getJustificativa() { return justificativa; }
     public void setJustificativa(String justificativa) { this.justificativa = justificativa; }
-
-    public LocalDateTime getDataHoraAvaliacao() { return dataHoraAvaliacao; }
-    public void setDataHoraAvaliacao(LocalDateTime dataHoraAvaliacao) {
-        this.dataHoraAvaliacao = dataHoraAvaliacao;
-    }
 }
