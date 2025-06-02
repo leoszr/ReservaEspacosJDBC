@@ -1,20 +1,40 @@
 package bd1.model;
 
 public class Usuario {
-    private long id;
+    private int id;
     private String nome;
     private String email;
-    private String tipoUsuario; // "SOLICITANTE" ou "GESTOR"
+    private String tipo; // "SOLICITANTE" ou "GESTOR"
 
-    public long getId() { return id; }
-    public void setId(long id) { this.id = id; }
+    public int getId() {
+        return id;
+    }
 
-    public String getNome() { return nome; }
-    public void setNome(String nome) { this.nome = nome; }
+    public void setId(int id) {
+        this.id = id;
+    }
 
-    public String getEmail() { return email; }
-    public void setEmail(String email) { this.email = email; }
+    public String getNome() {
+        return nome;
+    }
 
-    public String getTipoUsuario() { return tipoUsuario; }
-    public void setTipoUsuario(String tipoUsuario) { this.tipoUsuario = tipoUsuario; }
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
 }
