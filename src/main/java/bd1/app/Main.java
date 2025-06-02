@@ -4,7 +4,7 @@ import bd1.model.Usuario;
 import bd1.dao.UsuarioDAO;
 
 
-
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
@@ -39,12 +39,15 @@ public class Main {
 
                 case 2:
                     System.out.println("\n--- Lista de Usuários ---");
-                    for (Usuario u : usuarioDAO.listarUsuarios()) {
-                        System.out.println("ID: " + u.getId());
-                        System.out.println("Nome: " + u.getNome());
-                        System.out.println("Email: " + u.getEmail());
-                        System.out.println("Tipo: " + u.getTipo());
-                        System.out.println("-------------------------");
+                    List<Usuario> usuarios = usuarioDAO.listarUsuarios(); // Pega a lista de usuários
+
+                    if (usuarios.isEmpty()) {
+                        System.out.println("Nenhum usuário cadastrado.");
+                    } else {
+                        for (Usuario u : usuarios) {
+                            System.out.println(u); // Chama o toString()
+                            System.out.println("-------------------------");
+                        }
                     }
                     break;
 
