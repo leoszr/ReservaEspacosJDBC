@@ -1,16 +1,16 @@
 package bd1.model;
 
 public class Usuario {
-    private int id;
+    private long id;
     private String nome;
     private String email;
     private String tipo; // "SOLICITANTE" ou "GESTOR"
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 
